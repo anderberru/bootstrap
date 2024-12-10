@@ -11,35 +11,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="accordion" id="menuAccordion">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="menuHeading">
-                <button class="accordion-button collapsed" type="button" style="background-color: #7d7272; color: white;"
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#menuContent" 
-                        aria-expanded="false" 
-                        aria-controls="menuContent">
-                    MENU
-                </button>
-            </h2>
-            <div id="menuContent" class="accordion-collapse collapse" 
-                 aria-labelledby="menuHeading" 
-                 data-bs-parent="#menuAccordion">
-                <div class="accordion-body">
-                    <nav id="menuContent">
-                        <ul>
-                            <li><a href="index.html">Hasiera</a></li>
-                            <li><a href="araudia.html">Araudia</a></li>
-                            <li><a href="egutegia.html">Egutegia</a></li>
-                            <li><a href="memoriak.html">Memoriak</a></li>
-                            <li><a href="auto-ebaluazioa.html">Auto Ebaluazioa</a></li>
-                            <li><a href="gure-taldea.html">Gure Taldea</a></li>
-                        </ul>
-                    </nav>
+    <!-- Menú visible en pantallas grandes -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark d-none d-md-flex sticky-top">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Hasiera</a></li>
+                <li class="nav-item"><a href="araudia.html" class="nav-link">Araudia</a></li>
+                <li class="nav-item"><a href="egutegia.html" class="nav-link">Egutegia</a></li>
+                <li class="nav-item"><a href="memoriak.html" class="nav-link">Memoriak</a></li>
+                <li class="nav-item"><a href="auto-ebaluazioa.html" class="nav-link">Auto Ebaluazioa</a></li>
+                <li class="nav-item"><a href="gure-taldea.html" class="nav-link">Gure Taldea</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div class="accordion d-block d-md-none" id="menuAccordion">
+        <div class="accordion" id="menuAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="menuHeading">
+                    <button class="accordion-button collapsed" type="button" style="background-color: #7d7272; color: white;"
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#menuContent" 
+                            aria-expanded="false" 
+                            aria-controls="menuContent">
+                        MENU
+                    </button>
+                </h2>
+                <div id="menuContent" class="accordion-collapse collapse" 
+                    aria-labelledby="menuHeading" 
+                    data-bs-parent="#menuAccordion">
+                    <div class="accordion-body">
+                        <nav id="menuContent">
+                            <ul>
+                                <li><a href="index.html">Hasiera</a></li>
+                                <li><a href="araudia.html">Araudia</a></li>
+                                <li><a href="egutegia.html">Egutegia</a></li>
+                                <li><a href="memoriak.html">Memoriak</a></li>
+                                <li><a href="auto-ebaluazioa.html">Auto Ebaluazioa</a></li>
+                                <li><a href="gure-taldea.html">Gure Taldea</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="container">
         <header class="text-center my-4">
             <h1>Memoriak</h1>

@@ -11,35 +11,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="accordion" id="menuAccordion">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="menuHeading">
-                <button class="accordion-button collapsed" type="button" style="background-color: #7d7272; color: white;"
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#menuContent" 
-                        aria-expanded="false" 
-                        aria-controls="menuContent">
-                    MENU
-                </button>
-            </h2>
-            <div id="menuContent" class="accordion-collapse collapse" 
-                 aria-labelledby="menuHeading" 
-                 data-bs-parent="#menuAccordion">
-                <div class="accordion-body">
-                    <nav id="menuContent">
-                        <ul>
-                            <li><a href="index.html">Hasiera</a></li>
-                            <li><a href="araudia.html">Araudia</a></li>
-                            <li><a href="egutegia.html">Egutegia</a></li>
-                            <li><a href="memoriak.html">Memoriak</a></li>
-                            <li><a href="auto-ebaluazioa.html">Auto Ebaluazioa</a></li>
-                            <li><a href="gure-taldea.html">Gure Taldea</a></li>
-                        </ul>
-                    </nav>
+    <!-- Menú visible en pantallas grandes -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark d-none d-md-flex sticky-top">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Hasiera</a></li>
+                <li class="nav-item"><a href="araudia.html" class="nav-link">Araudia</a></li>
+                <li class="nav-item"><a href="egutegia.html" class="nav-link">Egutegia</a></li>
+                <li class="nav-item"><a href="memoriak.html" class="nav-link">Memoriak</a></li>
+                <li class="nav-item"><a href="auto-ebaluazioa.html" class="nav-link">Auto Ebaluazioa</a></li>
+                <li class="nav-item"><a href="gure-taldea.html" class="nav-link">Gure Taldea</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div class="accordion d-block d-md-none" id="menuAccordion">
+        <div class="accordion" id="menuAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="menuHeading">
+                    <button class="accordion-button collapsed" type="button" style="background-color: #7d7272; color: white;"
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#menuContent" 
+                            aria-expanded="false" 
+                            aria-controls="menuContent">
+                        MENU
+                    </button>
+                </h2>
+                <div id="menuContent" class="accordion-collapse collapse" 
+                    aria-labelledby="menuHeading" 
+                    data-bs-parent="#menuAccordion">
+                    <div class="accordion-body">
+                        <nav id="menuContent">
+                            <ul>
+                                <li><a href="index.html">Hasiera</a></li>
+                                <li><a href="araudia.html">Araudia</a></li>
+                                <li><a href="egutegia.html">Egutegia</a></li>
+                                <li><a href="memoriak.html">Memoriak</a></li>
+                                <li><a href="auto-ebaluazioa.html">Auto Ebaluazioa</a></li>
+                                <li><a href="gure-taldea.html">Gure Taldea</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <header class="text-center my-4">
             <h1>Guri Buruz</h1>
@@ -52,7 +70,17 @@
             <li><b>Ander Arruti</b></li>
         </ul>
         <p>Hemen gaude: </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5806.670686834508!2d-2.010787!3d43.307239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b1ac40eb0f81%3A0x76474ae8390e118b!2sManuel%20Lardizabal%20pasealekua%2C%201%2C%2020018%20San%20Sebasti%C3%A1n%2C%20Guip%C3%BAzcoa%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1732622509383!5m2!1ses!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container-fluid">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5806.670686834508!2d-2.010787!3d43.307239!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b1ac40eb0f81%3A0x76474ae8390e118b!2sManuel%20Lardizabal%20pasealekua%2C%201%2C%2020018%20San%20Sebasti%C3%A1n%2C%20Guip%C3%BAzcoa%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1732622509383!5m2!1ses!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        style="max-width: 900px; max-height: 900px; border: 0; width: 100%; height: auto;">
+                </iframe>
+            </div>
+        </div>
         <footer class="text-center my-4">
             <p>&copy; 2024 Gradu Amaierako Lanaren Informazioa. Todos los derechos reservados.</p>
             <img src="images/PK.png" class="img-fluid" alt="proiektuen kudeaketa" style="width: 10%" />

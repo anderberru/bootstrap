@@ -19,7 +19,15 @@ body {
     max-height: 80vh;
 }
 
-
+.navbar {
+    margin: 0; /* Asegura que la barra no tenga márgenes */
+    padding: 0; /* Asegura que no haya rellenos adicionales */
+    position: fixed; /* Fija la barra al borde superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Fija al borde izquierdo */
+    width: 100%; /* Se extiende a todo el ancho */
+    z-index: 1030; /* Por encima del contenido */
+}
 
 nav {
     background-color: #333;
