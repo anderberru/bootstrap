@@ -29,6 +29,10 @@ body {
     z-index: 1030; /* Por encima del contenido */
 }
 
+.navbar-dark .nav-selected {
+    color: #ffffff; /* Cambia #ffffff al color que desees */
+}
+
 nav {
     background-color: #333;
     color: #333;
