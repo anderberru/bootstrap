@@ -109,6 +109,10 @@ iframe {
     margin: 0 auto;
 }
 
+#responsiveForm {
+    height: 1500px;
+}
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     nav ul {
@@ -118,5 +122,16 @@ iframe {
 
     .container {
         margin-top: 120px; /* Adjust this value if the nav height changes */
+    }
+
+    #responsiveForm {
+        height: 2000px; /* Ajustar según sea necesario */
+    }
+}
+
+
+@media (max-width: 576px) {
+    #responsiveForm {
+        height: 2000px; /* Más alto para pantallas muy pequeñas */
     }
 }
